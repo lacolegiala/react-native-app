@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
 });
 
 const AppBar = () => {
-  return <View style={styles.container}><Text color='appBarText'>Repositories</Text></View>;
+  return <View style={styles.container}><Text color='appBarText' fontWeight='bold'>Repositories</Text></View>;
 };
 
 export default AppBar;
