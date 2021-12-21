@@ -21,7 +21,9 @@ const AppBar = () => {
   return (
     <Pressable onPress={console.log('aaa')}>
       <View style={styles.container}>
-        <Text color='appBarText' fontWeight='bold'>Repositories</Text>
+        <Text color='appBarText' fontWeight='bold' fontSize='subheading'>
+          Repositories
+        </Text>
       </View>
     </Pressable>
   );
