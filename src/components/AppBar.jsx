@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
     paddingBottom: 16,
     backgroundColor: '#25292C',
     display: 'flex',
-    opacity: 0.9
+    opacity: 0.96
   },
   text: {
     color: 'white'
