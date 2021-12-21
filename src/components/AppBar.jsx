@@ -7,6 +7,7 @@ import Pressable from 'react-native/Libraries/Components/Pressable/Pressable';
 const styles = StyleSheet.create({
   container: {
     paddingTop: Constants.statusBarHeight,
+    paddingBottom: 16,
     backgroundColor: '#25292C',
     display: 'flex',
     opacity: 0.9
