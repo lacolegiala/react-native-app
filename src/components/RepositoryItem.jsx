@@ -3,6 +3,9 @@ import { View, Image, StyleSheet } from 'react-native';
 import Text from '../components/Text'
 
 const styles = StyleSheet.create({
+  card: {
+    backgroundColor: 'white'
+  },
   pieceOfInfo: {
     flexDirection: 'row'
   }
@@ -10,7 +13,7 @@ const styles = StyleSheet.create({
 
 const RepositoryItem = ({item}) => {
   return (
-    <View>
+    <View style={styles.card}>
       <View style={styles.pieceOfInfo}>
         <Image style={{width: 50, height: 50}} source={{uri: item.ownerAvatarUrl}}></Image>
         <View>
@@ -27,19 +30,19 @@ const RepositoryItem = ({item}) => {
       </View>
       <View style={styles.pieceOfInfo}>
         <View>
-          <Text>{item.stargazersCount}</Text>
+          <Text fontWeight='bold'>{item.stargazersCount}</Text>
           <Text>Stars</Text>
         </View>
         <View>
-          <Text>{item.forksCount}</Text>
+          <Text fontWeight='bold'>{item.forksCount}</Text>
           <Text>Forks</Text>
         </View>
         <View>
-          <Text>{item.reviewCount}</Text>
+          <Text fontWeight='bold'>{item.reviewCount}</Text>
           <Text>Reviews</Text>
         </View>
         <View>
-          <Text>{item.ratingAverage}</Text>
+          <Text fontWeight='bold'>{item.ratingAverage}</Text>
           <Text>Rating</Text>
         </View>
       </View>
