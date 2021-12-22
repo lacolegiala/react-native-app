@@ -56,7 +56,7 @@ const formatNumber = (stat) => {
     return stat
   }
   else {
-    return stat / 1000
+    return (stat / 1000).toFixed(1).concat('k')
   }
 }
 
