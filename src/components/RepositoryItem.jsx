@@ -1,5 +1,6 @@
 import React from 'react';
-import { Text, View, Image, StyleSheet } from 'react-native';
+import { View, Image, StyleSheet } from 'react-native';
+import Text from '../components/Text'
 
 const styles = StyleSheet.create({
   pieceOfInfo: {
@@ -13,7 +14,7 @@ const RepositoryItem = ({item}) => {
       <View style={styles.pieceOfInfo}>
         <Image style={{width: 50, height: 50}} source={{uri: item.ownerAvatarUrl}}></Image>
         <View>
-          <Text>
+          <Text fontWeight='bold'>
             {item.fullName}
           </Text>
           <Text>
