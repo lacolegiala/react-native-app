@@ -4,16 +4,21 @@ import Text from '../components/Text'
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: 'white'
+    backgroundColor: 'white',
   },
   pieceOfInfo: {
     flexDirection: 'row'
   },
   languageTag: {
-    backgroundColor: '#0366d6'
+    backgroundColor: '#0366d6',
   },
   languageText: {
-    color: 'white'
+    color: 'white',
+  },
+  tagWrapper: {
+    alignItems: 'flex-start',
+    justifyContent: 'center',
+    flex: 1
   }
 })
 
@@ -29,10 +34,12 @@ const RepositoryItem = ({item}) => {
           <Text>
             {item.description}
           </Text>
-          <View style={styles.languageTag}>
-            <Text style={styles.languageText}>
-              {item.language}
-            </Text>
+          <View style={styles.tagWrapper}>
+            <View style={styles.languageTag}>
+              <Text style={styles.languageText}>
+                {item.language}
+              </Text>
+            </View>
           </View>
         </View>
       </View>
