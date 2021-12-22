@@ -8,6 +8,12 @@ const styles = StyleSheet.create({
   },
   pieceOfInfo: {
     flexDirection: 'row'
+  },
+  languageTag: {
+    backgroundColor: '#0366d6'
+  },
+  languageText: {
+    color: 'white'
   }
 })
 
@@ -23,9 +29,11 @@ const RepositoryItem = ({item}) => {
           <Text>
             {item.description}
           </Text>
-          <Text>
-            {item.language}
-          </Text>
+          <View style={styles.languageTag}>
+            <Text style={styles.languageText}>
+              {item.language}
+            </Text>
+          </View>
         </View>
       </View>
       <View style={styles.pieceOfInfo}>
