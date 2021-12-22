@@ -68,22 +68,22 @@ const RepositoryItem = ({item}) => {
           </View>
         </View>
       </View>
-      <View style={styles.pieceOfInfo}>
+      <View style={styles.statWrapper}>
         <View style={styles.stat}>
           <Text fontWeight='bold'>{item.stargazersCount}</Text>
-          <Text>Stars</Text>
+          <Text color='textSecondary'>Stars</Text>
         </View>
         <View style={styles.stat}>
           <Text fontWeight='bold'>{item.forksCount}</Text>
-          <Text>Forks</Text>
+          <Text color='textSecondary'>Forks</Text>
         </View>
         <View style={styles.stat}>
           <Text fontWeight='bold'>{item.reviewCount}</Text>
-          <Text>Reviews</Text>
+          <Text color='textSecondary'>Reviews</Text>
         </View>
         <View style={styles.stat}>
           <Text fontWeight='bold'>{item.ratingAverage}</Text>
-          <Text>Rating</Text>
+          <Text color='textSecondary'>Rating</Text>
         </View>
       </View>
     </View>
