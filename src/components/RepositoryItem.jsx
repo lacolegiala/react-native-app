@@ -10,6 +10,8 @@ const styles = StyleSheet.create({
     width: 50,
     height: 50,
     borderRadius: 4,
+    marginTop: 6,
+    marginLeft: 6
   },
   pieceOfInfo: {
     flexDirection: 'row',
