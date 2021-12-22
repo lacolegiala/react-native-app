@@ -36,7 +36,7 @@ const RepositoryItem = ({item}) => {
           <Text fontWeight='bold'>
             {item.fullName}
           </Text>
-          <Text>
+          <Text color='textSecondary'>
             {item.description}
           </Text>
           <View style={styles.tagWrapper}>
