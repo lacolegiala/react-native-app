@@ -12,12 +12,15 @@ const styles = StyleSheet.create({
     borderRadius: 4,
     margin: 6
   },
-  pieceOfInfo: {
+  upperInfo: {
     flexDirection: 'row',
     margin: 6
   },
   upperInfoItem: {
     padding: 4
+  },
+  upperInfoWrapper: {
+    flex: 1
   },
   languageTag: {
     backgroundColor: '#0366d6',
@@ -34,17 +37,22 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     flex: 1
   },
+  statWrapper: {
+    alignItems: 'stretch',
+    justifyContent: 'space-around',
+    flexDirection: 'row'
+  },
   stat: {
-    margin: 16
+    alignItems: 'center'
   }
 })
 
 const RepositoryItem = ({item}) => {
   return (
     <View style={styles.card}>
-      <View style={styles.pieceOfInfo}>
+      <View style={styles.upperInfo}>
         <Image style={styles.image} source={{uri: item.ownerAvatarUrl}}></Image>
-        <View>
+        <View style={styles.upperInfoWrapper}>
           <Text style={styles.upperInfoItem} fontWeight='bold'>
             {item.fullName}
           </Text>
