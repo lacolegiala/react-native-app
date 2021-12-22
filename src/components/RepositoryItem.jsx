@@ -5,6 +5,7 @@ import Text from '../components/Text'
 const styles = StyleSheet.create({
   card: {
     backgroundColor: 'white',
+    paddingBottom: 12
   },
   image: {
     width: 50,
