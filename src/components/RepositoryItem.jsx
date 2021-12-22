@@ -24,6 +24,9 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start',
     justifyContent: 'flex-start',
     flex: 1
+  },
+  stat: {
+    margin: 16
   }
 })
 
@@ -49,19 +52,19 @@ const RepositoryItem = ({item}) => {
         </View>
       </View>
       <View style={styles.pieceOfInfo}>
-        <View>
+        <View style={styles.stat}>
           <Text fontWeight='bold'>{item.stargazersCount}</Text>
           <Text>Stars</Text>
         </View>
-        <View>
+        <View style={styles.stat}>
           <Text fontWeight='bold'>{item.forksCount}</Text>
           <Text>Forks</Text>
         </View>
-        <View>
+        <View style={styles.stat}>
           <Text fontWeight='bold'>{item.reviewCount}</Text>
           <Text>Reviews</Text>
         </View>
-        <View>
+        <View style={styles.stat}>
           <Text fontWeight='bold'>{item.ratingAverage}</Text>
           <Text>Rating</Text>
         </View>
