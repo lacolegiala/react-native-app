@@ -7,17 +7,22 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
   },
   pieceOfInfo: {
-    flexDirection: 'row'
+    flexDirection: 'row',
+    margin: 6
   },
   languageTag: {
     backgroundColor: '#0366d6',
+    margin: 6,
+    padding: 4,
+    borderRadius: 4
   },
   languageText: {
     color: 'white',
+    padding: 2
   },
   tagWrapper: {
     alignItems: 'flex-start',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
     flex: 1
   }
 })
