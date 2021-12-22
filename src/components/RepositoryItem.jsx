@@ -6,9 +6,17 @@ const styles = StyleSheet.create({
   card: {
     backgroundColor: 'white',
   },
+  image: {
+    width: 50,
+    height: 50,
+    borderRadius: 4,
+  },
   pieceOfInfo: {
     flexDirection: 'row',
     margin: 6
+  },
+  upperInfoItem: {
+    padding: 4
   },
   languageTag: {
     backgroundColor: '#0366d6',
@@ -34,12 +42,12 @@ const RepositoryItem = ({item}) => {
   return (
     <View style={styles.card}>
       <View style={styles.pieceOfInfo}>
-        <Image style={{width: 50, height: 50}} source={{uri: item.ownerAvatarUrl}}></Image>
+        <Image style={styles.image} source={{uri: item.ownerAvatarUrl}}></Image>
         <View>
-          <Text fontWeight='bold'>
+          <Text style={styles.upperInfoItem} fontWeight='bold'>
             {item.fullName}
           </Text>
-          <Text color='textSecondary'>
+          <Text style={styles.upperInfoItem} color='textSecondary'>
             {item.description}
           </Text>
           <View style={styles.tagWrapper}>
