@@ -3,6 +3,7 @@ import { View, StyleSheet } from 'react-native';
 import Text from '../components/Text';
 import Constants from 'expo-constants';
 import Pressable from 'react-native/Libraries/Components/Pressable/Pressable';
+import { Link } from 'react-router-native';
 
 const styles = StyleSheet.create({
   container: {
@@ -20,14 +21,16 @@ const styles = StyleSheet.create({
 
 const AppBar = () => {
   return (
-    <Pressable onPress={console.log('aaa')}>
+    <Pressable>
       <View style={styles.container}>
-        <Text color='appBarText' fontWeight='bold' fontSize='subheading'>
-          Repositories
-        </Text>
-        <Text color='appBarText' fontWeight='bold' fontSize='subheading'>
-          Sign in
-        </Text>
+        <Link to='/'>
+          <Text color='appBarText' fontWeight='bold' fontSize='subheading'>
+            Repositories
+          </Text>
+        </Link>
+        <Link to='/signin'>
+          <Text color='appBarText' fontWeight='bold' fontSize='subheading'>Sign in</Text>
+        </Link>
       </View>
     </Pressable>
   );
