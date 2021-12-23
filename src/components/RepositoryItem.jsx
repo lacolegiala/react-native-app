@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Image, StyleSheet } from 'react-native';
 import Text from '../components/Text'
+import Stat from '../components/Stat'
 
 const styles = StyleSheet.create({
   card: {
@@ -38,27 +39,27 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     flex: 1
   },
-  statWrapper: {
-    alignItems: 'stretch',
-    justifyContent: 'space-around',
-    flexDirection: 'row'
-  },
-  stat: {
-    alignItems: 'center'
-  },
-  statText: {
-    marginTop: 4
-  }
+  // statWrapper: {
+  //   alignItems: 'stretch',
+  //   justifyContent: 'space-around',
+  //   flexDirection: 'row'
+  // },
+  // stat: {
+  //   alignItems: 'center'
+  // },
+  // statText: {
+  //   marginTop: 4
+  // }
 })
 
-const formatNumber = (stat) => {
-  if (stat < 1000) {
-    return stat
-  }
-  else {
-    return (stat / 1000).toFixed(1).concat('k')
-  }
-}
+// const formatNumber = (stat) => {
+//   if (stat < 1000) {
+//     return stat
+//   }
+//   else {
+//     return (stat / 1000).toFixed(1).concat('k')
+//   }
+// }
 
 const RepositoryItem = ({item}) => {
   return (
@@ -81,7 +82,8 @@ const RepositoryItem = ({item}) => {
           </View>
         </View>
       </View>
-      <View style={styles.statWrapper}>
+      <Stat item={item}/>
+      {/* <View style={styles.statWrapper}>
         <View style={styles.stat}>
           <Text fontWeight='bold'>{formatNumber(item.stargazersCount)}</Text>
           <Text style={styles.statText} color='textSecondary'>Stars</Text>
@@ -98,7 +100,7 @@ const RepositoryItem = ({item}) => {
           <Text fontWeight='bold'>{item.ratingAverage}</Text>
           <Text style={styles.statText} color='textSecondary'>Rating</Text>
         </View>
-      </View>
+      </View> */}
     </View>
   );
 };
