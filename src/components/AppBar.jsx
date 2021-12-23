@@ -10,6 +10,7 @@ const styles = StyleSheet.create({
     paddingBottom: 16,
     backgroundColor: '#25292C',
     display: 'flex',
+    flexDirection: 'row',
     opacity: 0.96
   },
   text: {
@@ -23,6 +24,9 @@ const AppBar = () => {
       <View style={styles.container}>
         <Text color='appBarText' fontWeight='bold' fontSize='subheading'>
           Repositories
+        </Text>
+        <Text color='appBarText' fontWeight='bold' fontSize='subheading'>
+          Sign in
         </Text>
       </View>
     </Pressable>
