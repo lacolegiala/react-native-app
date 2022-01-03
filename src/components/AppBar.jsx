@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, ScrollView } from 'react-native';
 import Text from '../components/Text';
 import Constants from 'expo-constants';
 import Pressable from 'react-native/Libraries/Components/Pressable/Pressable';
@@ -23,6 +23,7 @@ const AppBar = () => {
   return (
     <Pressable>
       <View style={styles.container}>
+      <ScrollView horizontal>
         <Link to='/'>
           <Text color='appBarText' fontWeight='bold' fontSize='subheading'>
             Repositories
@@ -31,6 +32,7 @@ const AppBar = () => {
         <Link to='/signin'>
           <Text color='appBarText' fontWeight='bold' fontSize='subheading'>Sign in</Text>
         </Link>
+      </ScrollView>
       </View>
     </Pressable>
   );
