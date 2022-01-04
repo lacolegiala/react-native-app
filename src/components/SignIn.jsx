@@ -33,12 +33,12 @@ const SignIn = () => {
         username: '',
         password: ''
       }}
-      onSubmit={onSubmit}
+      onSubmit={(values) => onSubmit(values)}
     >
       <View style={styles.formCard}>
         <FormikTextInput name='username' placeholder='Username' />
-        <FormikTextInput name='password' placeholder='Password' />
-        <Pressable style={styles.submitButton} onPress={onSubmit}>
+        <FormikTextInput secure={true} name='password' placeholder='Password' />
+        <Pressable style={styles.submitButton} onPress={(values) => onSubmit(values)}>
           <Text color='appBarText' fontWeight='bold'>Sign in</Text>
         </Pressable>
       </View>

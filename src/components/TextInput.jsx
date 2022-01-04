@@ -14,10 +14,10 @@ const styles = StyleSheet.create({
 	}
 });
 
-const TextInput = ({ style, error, ...props }) => {
+const TextInput = ({ style, error, secure, ...props }) => {
   const textInputStyle = [style, styles.textInput];
 
-  return <NativeTextInput style={textInputStyle} {...props} />;
+  return <NativeTextInput style={textInputStyle} secureTextEntry={secure} {...props} />;
 };
 
 export default TextInput;
