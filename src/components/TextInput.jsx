@@ -5,7 +5,11 @@ const styles = StyleSheet.create({
 	textInput: {
 		fontSize: 20,
 		borderWidth: 0.5,
-		borderColor: '#B7BAB7'
+		borderColor: '#B7BAB7',
+		marginHorizontal: 10,
+		marginTop: 12,
+		borderRadius: 6,
+		padding: 6
 	}
 });
 
