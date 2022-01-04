@@ -3,13 +3,14 @@ import { TextInput as NativeTextInput, StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
 	textInput: {
-		fontSize: 20,
-		borderWidth: 0.5,
+		fontSize: 16,
+		borderWidth: 0.8,
 		borderColor: '#B7BAB7',
+		backgroundColor: 'white',
 		marginHorizontal: 10,
 		marginTop: 12,
 		borderRadius: 6,
-		padding: 6
+		padding: 12
 	}
 });
 
