@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
 		backgroundColor: 'white',
 		marginHorizontal: 10,
 		marginTop: 12,
-		borderRadius: 6,
+		borderRadius: 4,
 		padding: 12
 	}
 });

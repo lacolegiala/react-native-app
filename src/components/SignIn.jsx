@@ -10,6 +10,9 @@ const onSubmit = (values) => {
 };
 
 const styles = StyleSheet.create({
+  formCard: {
+    backgroundColor: 'white'
+  },
   submitButton: {
     alignItems: 'center',
     justifyContent: 'center',
@@ -18,7 +21,7 @@ const styles = StyleSheet.create({
     borderRadius: 4,
     elevation: 3,
     backgroundColor: '#2A64CC',
-    marginTop: 12,
+    marginVertical: 12,
     marginHorizontal: 10
   },
 })
@@ -32,7 +35,7 @@ const SignIn = () => {
       }}
       onSubmit={onSubmit}
     >
-      <View>
+      <View style={styles.formCard}>
         <FormikTextInput name='username' placeholder='Username' />
         <FormikTextInput name='password' placeholder='Password' />
         <Pressable style={styles.submitButton} onPress={onSubmit}>
