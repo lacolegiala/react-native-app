@@ -23,6 +23,9 @@ const styles = StyleSheet.create({
   fontSizeSubheading: {
     fontSize: theme.fontSizes.subheading,
   },
+  fontSizeRegular: {
+    fontSize: 16
+  },
   fontWeightBold: {
     fontWeight: '700',
   },
@@ -31,12 +34,12 @@ const styles = StyleSheet.create({
 const Text = ({ color, fontSize, fontWeight, style, ...props }) => {
   const textStyle = [
     styles.text,
-    color === 'textSecondary' && styles.colorTextSecondary,
-    color === 'primary' && styles.colorPrimary,
-    color === 'appBarText' && styles.colorAppBar,
-    fontSize === 'subheading' && styles.fontSizeSubheading,
-    fontWeight === 'bold' && styles.fontWeightBold,
-    style,
+    props.color === 'textSecondary' && styles.colorTextSecondary,
+    props.color === 'primary' && styles.colorPrimary,
+    props.color === 'appBarText' && styles.colorAppBar,
+    props.fontSize ? 'subheading' && styles.fontSizeSubheading : styles.fontSizeRegular,
+    props.fontWeight === 'bold' && styles.fontWeightBold,
+    props.style,
   ];
 
   return <NativeText style={textStyle} {...props} />;
