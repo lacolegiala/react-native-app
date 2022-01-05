@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     fontSize: theme.fontSizes.subheading,
   },
   fontWeightBold: {
-    fontWeight: theme.fontWeights.bold,
+    fontWeight: '700',
   },
 });
 
