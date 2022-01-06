@@ -5,7 +5,7 @@ import { Formik } from 'formik'
 
 import Text from './Text'
 
-const onSubmit = (values) => {
+const onSubmit = (values: SignInFormValues) => {
   console.log(values);
 };
 
@@ -26,22 +26,30 @@ const styles = StyleSheet.create({
   },
 })
 
+type SignInFormValues = {
+  username: string,
+  password: string
+}
+
 const SignIn = () => {
+  const initialValues: SignInFormValues = {
+    username: '',
+    password: ''
+  }
   return (
     <Formik
-      initialValues={{
-        username: '',
-        password: ''
-      }}
-      onSubmit={(values) => onSubmit(values)}
+      initialValues={initialValues}
+      onSubmit={onSubmit}
     >
-      <View style={styles.formCard}>
-        <FormikTextInput secure={false} name='username' placeholder='Username' />
-        <FormikTextInput secure={true} name='password' placeholder='Password' />
-        <Pressable style={styles.submitButton} onPress={(values) => onSubmit(values)}>
-          <Text fontSize='regular' color='appBarText' fontWeight='bold'>Sign in</Text>
-        </Pressable>
-      </View>
+      {({ handleSubmit }) => (
+        <View style={styles.formCard}>
+          <FormikTextInput secure={false} name='username' placeholder='Username' />
+          <FormikTextInput secure={true} name='password' placeholder='Password' />
+          <Pressable style={styles.submitButton} onPress={handleSubmit}>
+            <Text fontSize='regular' color='appBarText' fontWeight='bold'>Sign in</Text>
+          </Pressable>
+        </View>
+      )}
     </Formik>
   );
 };
