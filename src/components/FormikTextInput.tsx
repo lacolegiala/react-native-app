@@ -13,7 +13,8 @@ const styles = StyleSheet.create({
 
 type Props = {
   name: string,
-  secure: boolean
+  secure: boolean,
+  placeholder?: string
 }
 
 const FormikTextInput = (props: Props) => {

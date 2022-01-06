@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
+import { Repository } from '../types';
 import Text from './Text'
 
 const styles = StyleSheet.create({
@@ -16,7 +17,7 @@ const styles = StyleSheet.create({
   }
 })
 
-const formatNumber = (stat) => {
+const formatNumber = (stat: number) => {
   if (stat < 1000) {
     return stat
   }
@@ -25,23 +26,27 @@ const formatNumber = (stat) => {
   }
 }
 
-const Stat = ({item}) => {
+type Props = {
+  item: Repository
+}
+
+const Stat = (props: Props) => {
   return (
     <View style={styles.statWrapper}>
     <View style={styles.stat}>
-      <Text fontWeight='bold'>{formatNumber(item.stargazersCount)}</Text>
+      <Text fontWeight='bold'>{formatNumber(props.item.stargazersCount)}</Text>
       <Text style={styles.statText} color='textSecondary'>Stars</Text>
     </View>
     <View style={styles.stat}>
-      <Text fontWeight='bold'>{formatNumber(item.forksCount)}</Text>
+      <Text fontWeight='bold'>{formatNumber(props.item.forksCount)}</Text>
       <Text style={styles.statText} color='textSecondary'>Forks</Text>
     </View>
     <View style={styles.stat}>
-      <Text fontWeight='bold'>{formatNumber(item.reviewCount)}</Text>
+      <Text fontWeight='bold'>{formatNumber(props.item.reviewCount)}</Text>
       <Text style={styles.statText} color='textSecondary'>Reviews</Text>
     </View>
     <View style={styles.stat}>
-      <Text fontWeight='bold'>{item.ratingAverage}</Text>
+      <Text fontWeight='bold'>{props.item.ratingAverage}</Text>
       <Text style={styles.statText} color='textSecondary'>Rating</Text>
     </View>
   </View>
