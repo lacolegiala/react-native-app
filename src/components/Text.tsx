@@ -45,7 +45,7 @@ const Text = (props: Props) => {
     props.color === 'textSecondary' && styles.colorTextSecondary,
     props.color === 'primary' && styles.colorPrimary,
     props.color === 'appBarText' && styles.colorAppBar,
-    props.fontSize ? 'subheading' && styles.fontSizeSubheading : styles.fontSizeRegular,
+    props.fontSize === 'subheading' && styles.fontSizeSubheading,
     props.fontWeight === 'bold' && styles.fontWeightBold,
     props.style,
   ];

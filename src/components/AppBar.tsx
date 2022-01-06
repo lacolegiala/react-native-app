@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, StyleSheet, ScrollView } from 'react-native';
-import Text from '../components/Text';
+import Text from './Text';
 import Constants from 'expo-constants';
 import Pressable from 'react-native/Libraries/Components/Pressable/Pressable';
 import { Link } from 'react-router-native';
@@ -13,9 +13,6 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     opacity: 0.96
-  },
-  text: {
-    color: 'white'
   }
 });
 
