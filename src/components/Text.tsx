@@ -36,7 +36,7 @@ type Props = {
   fontSize?: string,
   fontWeight?: string,
   style?: StyleProp<TextStyle>,
-  children?: ReactNode | undefined
+  children?: ReactNode
 }
 
 const Text = (props: Props) => {
