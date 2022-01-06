@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Image, StyleSheet } from 'react-native';
 import Text from '../components/Text'
 import Stat from '../components/Stat'
+import { Repository } from '../types';
 
 const styles = StyleSheet.create({
   card: {
@@ -41,28 +42,32 @@ const styles = StyleSheet.create({
   },
 })
 
-const RepositoryItem = ({item}) => {
+type Props = {
+  item: Repository
+}
+
+const RepositoryItem = (props: Props) => {
   return (
     <View style={styles.card}>
       <View style={styles.upperInfo}>
-        <Image style={styles.image} source={{uri: item.ownerAvatarUrl}}></Image>
+        <Image style={styles.image} source={{uri: props.item.ownerAvatarUrl}}></Image>
         <View style={styles.upperInfoWrapper}>
           <Text style={styles.upperInfoItem} fontWeight='bold'>
-            {item.fullName}
+            {props.item.fullName}
           </Text>
           <Text style={styles.upperInfoItem} color='textSecondary'>
-            {item.description}
+            {props.item.description}
           </Text>
           <View style={styles.tagWrapper}>
             <View style={styles.languageTag}>
               <Text style={styles.languageText}>
-                {item.language}
+                {props.item.language}
               </Text>
             </View>
           </View>
         </View>
       </View>
-      <Stat item={item}/>
+      <Stat item={props.item}/>
     </View>
   );
 };

@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
 
 type Props = {
   style?: StyleProp<TextStyle>,
-  error?: string,
+  error?: string | false,
   secure: boolean,
   onChangeText: (value: any) => void,
   onBlur: (value: any) => void,
