@@ -22,8 +22,8 @@ type Props = {
   style?: StyleProp<TextStyle>,
   error?: string | false,
   secure: boolean,
-  onChangeText: (value: any) => void,
-  onBlur: (value: any) => void,
+  onChangeText: (value: string) => void,
+  onBlur: () => void,
   value: string
 }
 
