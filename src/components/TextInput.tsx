@@ -11,6 +11,9 @@ const styles = StyleSheet.create({
     marginTop: 12,
     borderRadius: 4,
     padding: 12
+  },
+  error: {
+    borderColor: 'red'
   }
 });
 
@@ -26,7 +29,12 @@ type Props = {
 const TextInput = (props: Props) => {
   const textInputStyle = [props.style, styles.textInput];
 
-  return <NativeTextInput style={textInputStyle} secureTextEntry={props.secure} {...props} />;
+  if (!props.error) {
+    return <NativeTextInput style={textInputStyle} secureTextEntry={props.secure} {...props} />;
+  }
+  else {
+    return <NativeTextInput style={[textInputStyle, styles.error]} secureTextEntry={props.secure} {...props} />;
+  }
 };
 
 export default TextInput;
