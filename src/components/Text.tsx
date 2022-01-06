@@ -50,7 +50,7 @@ const Text = (props: Props) => {
     props.style,
   ];
 
-  return <NativeText style={textStyle} {...props} />;
+  return <NativeText {...props} style={textStyle}  />;
 };
 
 export default Text;
