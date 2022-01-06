@@ -30,12 +30,13 @@ type Props = {
 const TextInput = (props: Props) => {
   const textInputStyle = [props.style, styles.textInput];
 
-  if (!props.error) {
-    return <NativeTextInput style={textInputStyle} secureTextEntry={props.secure} {...props} />;
-  }
-  else {
-    return <NativeTextInput style={[textInputStyle, styles.error]} secureTextEntry={props.secure} {...props} />;
-  }
+  return (
+    <NativeTextInput 
+      style={props.error ? [textInputStyle, styles.error] : textInputStyle} 
+      secureTextEntry={props.secure} 
+      {...props}
+    />
+  )
 };
 
 export default TextInput;
