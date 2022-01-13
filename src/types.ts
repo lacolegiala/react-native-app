@@ -9,3 +9,10 @@ export type Repository = {
   reviewCount: number,
   ownerAvatarUrl: string
 }
+
+export type RepoNode = {
+  edges: {
+    cursor: string,
+    node: Repository
+  }[]
+}
