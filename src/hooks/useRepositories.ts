@@ -6,14 +6,17 @@ const useRepositories = () => {
   const [loading, setLoading] = useState(false);
 
   const fetchRepositories = async () => {
-    setLoading(true);
-
-    // Replace the IP address part with your own IP address!
-    const response = await fetch('http://192.168.0.22:5001/api/repositories');
-    const json = await response.json();
-
-    setLoading(false);
-    setRepositories(json);
+    try {
+      setLoading(true);
+  
+      // Replace the IP address part with your own IP address!
+      const response = await fetch('http://192.168.10.46:5001/api/repositories');
+      const json = await response.json();
+  
+      setLoading(false);
+      setRepositories(json);
+    } catch (error) {
+    }
   };
 
   useEffect(() => {
