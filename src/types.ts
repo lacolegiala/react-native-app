@@ -12,7 +12,6 @@ export type Repository = {
 
 export type RepoNode = {
   edges: {
-    cursor: string,
     node: Repository
   }[]
 }
