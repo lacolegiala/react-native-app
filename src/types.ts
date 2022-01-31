@@ -11,7 +11,7 @@ export type Repository = {
 }
 
 export type RepoNode = {
-  edges: {
+  edges: Array<{
     node: Repository
-  }[]
+  }>
 }
