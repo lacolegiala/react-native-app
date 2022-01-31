@@ -82,3 +82,6 @@ buck-out/
 web-build/
 
 # @end expo-cli
+
+# environment variable
+.env
