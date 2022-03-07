@@ -15,3 +15,8 @@ export type RepoNode = {
     node: Repository
   }>
 }
+
+export type AuthenticateInput = {
+  username: string,
+  password: string
+}

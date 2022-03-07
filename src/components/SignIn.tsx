@@ -5,15 +5,13 @@ import { Formik } from 'formik'
 import * as yup from 'yup';
 
 import Text from './Text'
+import useSignIn from '../hooks/useSignIn';
 
 const validationSchema = yup.object().shape({
   username: yup.string().required('Username is required'),
   password: yup.string().required('Password is required')
 })
 
-const onSubmit = (values: SignInFormValues) => {
-  console.log(values);
-};
 
 const styles = StyleSheet.create({
   formCard: {
@@ -38,10 +36,23 @@ type SignInFormValues = {
 }
 
 const SignIn = () => {
+  const [signIn] = useSignIn()
   const initialValues: SignInFormValues = {
     username: '',
     password: ''
   }
+
+  const onSubmit = async (values: SignInFormValues) => {
+    const { username, password } = values;
+
+    try {
+      const { data } = await signIn({ username: username, password: password });
+      console.log('token', data?.authenticate.accessToken);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <Formik
       initialValues={initialValues}
